@@ -1,38 +1,146 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d39ab8; /* soft pastel pink */
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  color: #1c1a1a;
+}
+
+html, body {
+  height: 100%;
+}
+
 .App {
+  display: grid;
+  grid-template-areas:
+    "intro intro"
+    "music quickfacts"
+    "learning theory";
+  grid-gap: 2rem;
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: transparent;
+  position: relative;
+}
+
+header {
+  grid-area: intro;
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+  letter-spacing: 0.03em;
+}
+
+/* Floating computer emoji */
+.floating-emoji {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 3rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+section {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #444;
+  letter-spacing: 0.04em;
+}
+
+section ul {
+  padding-left: 1rem;
+}
+
+section li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+}
+
+iframe {
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+footer {
+  grid-column: span 2;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Grid area assignment */
+section:nth-of-type(2) { grid-area: music; }
+section:nth-of-type(3) { grid-area: quickfacts; }
+section:nth-of-type(4) { grid-area: learning; }
+section:nth-of-type(5) { grid-area: theory; }
+
+/* Quote section */
+section.quote {
+  grid-column: span 2;
+  background: #fff6f8;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.quote blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.quote footer {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.3rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Sketch image */
+.man-sketch {
+  text-align: center;
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.man-sketch img {
+  width: 180px;
+  border-radius: 12px;
+  opacity: 0.9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.smiley {
+  text-align: center;
+  margin-top: 1rem;
 }
