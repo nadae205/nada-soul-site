@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nada-soul-site/static/css/main.e36db6bd.css",
+    "main.js": "/nada-soul-site/static/js/main.06bcf6f9.js",
+    "static/js/453.48a72178.chunk.js": "/nada-soul-site/static/js/453.48a72178.chunk.js",
+    "index.html": "/nada-soul-site/index.html",
+    "main.e36db6bd.css.map": "/nada-soul-site/static/css/main.e36db6bd.css.map",
+    "main.06bcf6f9.js.map": "/nada-soul-site/static/js/main.06bcf6f9.js.map",
+    "453.48a72178.chunk.js.map": "/nada-soul-site/static/js/453.48a72178.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e36db6bd.css",
+    "static/js/main.06bcf6f9.js"
+  ]
+}
