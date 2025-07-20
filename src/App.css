@@ -12,26 +12,20 @@ html, body {
 }
 
 .App {
-  display: grid;
-  grid-template-areas:
-    "intro intro"
-    "music quickfacts"
-    "learning theory";
-  grid-gap: 2rem;
-  padding: 3rem;
-  max-width: 1200px;
+  padding: 3rem 1rem;
+  max-width: 900px;
   margin: 0 auto;
   background-color: transparent;
-  position: relative;
 }
 
+/* HEADER */
 header {
-  grid-area: intro;
   text-align: center;
   background-color: #fff;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
   position: relative;
 }
 
@@ -47,7 +41,6 @@ header p {
   letter-spacing: 0.03em;
 }
 
-/* Floating computer emoji */
 .floating-emoji {
   position: absolute;
   top: -20px;
@@ -57,20 +50,18 @@ header p {
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
+/* SECTIONS */
 section {
   background-color: #ffffff;
   border-radius: 20px;
   padding: 1.5rem;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
   text-align: left;
+  margin-bottom: 2rem;
 }
 
 section h2 {
@@ -90,58 +81,31 @@ section li {
   letter-spacing: 0.02em;
 }
 
-iframe {
-  margin-top: 1rem;
+/* IMAGES + IFRAME */
+img {
   border-radius: 12px;
+  display: block;
+  margin: 1rem auto;
 }
 
+iframe {
+  border-radius: 12px;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* SKETCH + IMAGE SECTIONS */
+.makeup-pic,
+.magnifying-pic,
+.man-sketch {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* FOOTER */
 footer {
-  grid-column: span 2;
   text-align: center;
   margin-top: 3rem;
   font-size: 0.9rem;
   color: #777;
 }
-
-/* Grid area assignment */
-section:nth-of-type(2) { grid-area: music; }
-section:nth-of-type(3) { grid-area: quickfacts; }
-section:nth-of-type(4) { grid-area: learning; }
-section:nth-of-type(5) { grid-area: theory; }
-
-/* Quote section */
-section.quote {
-  grid-column: span 2;
-  background: #fff6f8;
-  text-align: center;
-}
-
-.quote blockquote {
-  font-style: italic;
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
-}
-
-.quote footer {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 0.3rem;
-}
-
-/* Sketch image */
-.man-sketch {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.man-sketch img {
-  width: 180px;
-  border-radius: 12px;
-  opacity: 0.9;
-}
-
-.smiley {
-  text-align: center;
-  margin-top: 1rem;
-}
-
