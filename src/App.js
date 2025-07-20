@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 
 function App() {
+  const publicPath = process.env.PUBLIC_URL;
+
   return (
     <div className="App">
       <header>
@@ -23,7 +25,7 @@ function App() {
         <h2>I am also a professional barista!</h2>
         <p>I try to craft the best espressos that I can to make my customers have a great experience</p>
         <img
-          src="/cof.jpg"
+          src={`${publicPath}/cof.jpg`}
           alt="Nada making coffee"
           style={{
             width: '220px',
@@ -90,21 +92,21 @@ function App() {
       {/* Images section */}
       <div className="makeup-pic">
         <img
-          src="/make.jpg"
+          src={`${publicPath}/make.jpg`}
           alt="makeup"
           style={{ width: '200px', borderRadius: '12px', display: 'block', margin: '1rem auto' }}
         />
       </div>
       <div className="magnifying-pic">
         <img
-          src="/mag.jpg"
+          src={`${publicPath}/mag.jpg`}
           alt="magnifying"
           style={{ width: '200px', borderRadius: '12px', display: 'block', margin: '1rem auto' }}
         />
       </div>
       <div className="man-sketch">
         <img
-          src="/the-vitruvian-man.jpg"
+          src={`${publicPath}/the-vitruvian-man.jpg`}
           alt="Vitruvian Man by Leonardo da Vinci"
           style={{ width: '200px', borderRadius: '12px', display: 'block', margin: '1rem auto' }}
         />
@@ -117,4 +119,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
